@@ -1,0 +1,38 @@
+# код
+#include <stdlib.h>
+#include "TXLib.h"
+#include "ghost1.h"
+
+
+
+
+int main()
+{
+    x = 150;//zadaem peremennie
+    y = 400;
+    s = 1;
+    kolichestvo = 1;
+    speed = 100;
+
+
+    txCreateWindow (1000, 600);//sozdaem okno
+
+    while (txMouseButtons() != 3)//neskonchaemii zikl dlya raboti programi
+    {
+
+        Interface();
+        full_ghost1();
+
+        x = x + 1;//zadaem dvizhenie
+        txSleep (speed);//rascadrovka
+        txClear();//ocistka polya
+
+        way1();//put' iz bivlioteki
+
+
+
+
+
+    }
+}
+
